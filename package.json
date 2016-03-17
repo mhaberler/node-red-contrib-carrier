@@ -1,0 +1,23 @@
+{
+  "name"         : "node-red-contrib-ads-b",
+  "version"      : "0.0.1",
+  "description"  : "A Node-Red ADS-B decoded node",
+  "license"      : "Apache-2.0",
+  "dependencies": {
+    "sbs1": "^0.2.3"
+  },
+  "author": "Neil Kolban <kolban@us.ibm.com>",
+  "keywords": [ "node-red", "ads-b", "dump1090", "ibm" ],
+  "node-red"     : {
+    "nodes": {
+      "ads-b": "ads-b.js"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nkolban/node-red-contrib-ads-b.git"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

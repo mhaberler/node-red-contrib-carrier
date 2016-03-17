@@ -1,0 +1,73 @@
+<!--
+  Copyright 2016 Neil Kolban.
+  
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+  
+  http://www.apache.org/licenses/LICENSE-2.0
+  
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+-->
+<script type="text/javascript">
+  RED.nodes.registerType('ads-b',{
+    // node definition
+    category: "function",
+    inputs: 1,
+    outputs: 1,
+    icon: "ads-b.png",
+    color: "#73c5e7",
+    label: function () {
+      return this.name || "ads-b"
+    },
+    paletteLabel: "ads-b",
+    defaults: {
+      name: {
+        value: ""
+      },
+    }
+  });
+</script>
+
+<script type="text/x-red" data-help-name="ads-b">
+<p>A node for parsing ADS-B message data.</p>
+<p>The input is an ADS-B message in SBS1 format that is a string supplied in <code>msg.payload</code>.
+This is the same format as published by the "dump1090" application.  The message.  The result is a
+new <code>msg.payload</code> output that contains an object that contains and object with some of
+the following fields populated:</p>
+<ul>
+  <li>message_type</li>
+  <li>transmission_type</li>
+  <li>session_id</li>
+  <li>aircraft_id</li>
+  <li>hex_ident</li>  
+  <li>flight_id</li>  
+  <li>generated_date</li>  
+  <li>generated_time</li>  
+  <li>logged_date</li>  
+  <li>logged_time</li>  
+  <li>callsign</li>  
+  <li>altitude</li>  
+  <li>ground_speed</li>  
+  <li>track</li>  
+  <li>lat</li>  
+  <li>lon</li>  
+  <li>vertical_rate</li>  
+  <li>squawk</li>  
+  <li>alert</li>  
+  <li>emergency</li>  
+  <li>spi</li>  
+  <li>is_on_ground</li>  
+</ul>
+</script>
+
+<script type="text/x-red" data-template-name="ads-b">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+</script>
