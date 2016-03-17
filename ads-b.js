@@ -25,7 +25,7 @@ module.exports = function(RED) {
       thisNode.send(msg);
     });
     RED.nodes.createNode(thisNode, config);
-  } // End of CouchDBNode definition
+  } // End of ADSBNode definition
 
   RED.nodes.registerType("ads-b", ADSBNode);
 } // End of module.exports

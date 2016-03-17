@@ -1,7 +1,7 @@
 {
   "name"         : "node-red-contrib-ads-b",
   "version"      : "0.0.1",
-  "description"  : "A Node-Red ADS-B decoded node",
+  "description"  : "A Node-RED ADS-B decoder node",
   "license"      : "Apache-2.0",
   "dependencies": {
     "sbs1": "^0.2.3"
