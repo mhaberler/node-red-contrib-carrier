@@ -5,6 +5,12 @@ Parser of ADS-B formatted message data.
 Use `npm install node-red-contrib-ads-b` to install.
 
 ## Usage
+ADS-B is the transponder data transmitted from aircraft.  Popular tools like `dump1090` can
+decode this data from an appropriate radio receiver device.  However, what is produced by these
+apps is still not directly consumable as it still needs parsed.  This node takes the input from
+`dump1090` in SBS1 format and transforms it into a parsed object that can then be readily
+worked upon.
+
 The input to the node is a string found in `msg.payload` that conforms to the
 SBS1 format.  This is the format that can be produced from the popular `dump1090` ADS-B
 decoder.  The output is a new message that has an object found at `msg.payload` which contains
