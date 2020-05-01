@@ -17,16 +17,12 @@
 module.exports = function(RED) {
   var sbs1 = require("sbs1");
   function ADSBNode(config) {
-    
-    var thisNode = this;
-    
-    this.on("input", function(msg) {
+    RED.nodes.createNode(this,config);
+    var node = this;    
+    node.on("input", function(msg) {
       msg.payload = sbs1.parseSbs1Message(msg.payload);
-      thisNode.send(msg);
+      node.send(msg);
     });
-    RED.nodes.createNode(thisNode, config);
-  } // End of ADSBNode definition
-
+  }
   RED.nodes.registerType("ads-b", ADSBNode);
-} // End of module.exports
-// End of file
+}
