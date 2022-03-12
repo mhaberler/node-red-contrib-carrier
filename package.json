@@ -4,7 +4,7 @@
   "description"  : "A Node-RED ADS-B decoder node",
   "license"      : "Apache-2.0",
   "dependencies": {
-    "sbs1": "^0.2.3"
+    "sbs1": "^0.2.5"
   },
   "author": "Neil Kolban <kolban@us.ibm.com>",
   "keywords": [ "node-red", "ads-b", "dump1090", "ibm" ],
