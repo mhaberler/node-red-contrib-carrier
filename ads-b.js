@@ -16,7 +16,7 @@
 
 module.exports = function(RED) {
   var sbs1 = require("sbs1");
-  function ADSBNode(config) {
+  var ADSBNode = function(config) {
     RED.nodes.createNode(this,config);
     var node = this;    
     node.on("input", function(msg) {
