@@ -1,7 +1,6 @@
 {
-  "name": "node-red-contrib-carrier",
+  "name": "@haberlerm/red-contrib-carrier",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,5 +14,10 @@
   "license": "ISC",
   "dependencies": {
     "carrier": "^0.3.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhaberler/node-red-contrib-carrier"
+  },
+  "description": ""
 }
